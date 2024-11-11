@@ -1,4 +1,4 @@
--- assembling-machine
+--[[ -- assembling-machine
 if not data.raw["assembling-machine"]["assembling-machine-3"].next_upgrade then
     data.raw["assembling-machine"]["assembling-machine-3"].next_upgrade = "assembling-machine-4"
 end
@@ -87,17 +87,7 @@ if not data.raw["assembling-machine"]["oil-refinery"].next_upgrade then
     data.raw["assembling-machine"]["oil-refinery"].next_upgrade = "oil-refinery-mk2"
 end
 
--- pumpjack
-if not data.raw["mining-drill"]["pumpjack"].fast_replaceable_group then
-    data.raw["mining-drill"]["pumpjack"].fast_replaceable_group = "pumpjack"
-    data.raw["mining-drill"]["pumpjack-mk2"].fast_replaceable_group = "pumpjack"
-else
-    data.raw["mining-drill"]["pumpjack-mk2"].fast_replaceable_group = data.raw["mining-drill"]["pumpjack"].fast_replaceable_group
-end
-
-if not data.raw["mining-drill"]["pumpjack"].next_upgrade then
-    data.raw["mining-drill"]["pumpjack"].next_upgrade = "pumpjack-mk2"
-end
+ ]]
 
 -- radar
 if not data.raw["radar"]["radar"].fast_replaceable_group then
@@ -109,4 +99,16 @@ end
 
 if not data.raw["radar"]["radar"].next_upgrade then
     data.raw["radar"]["radar"].next_upgrade = "radar-mk2"
+end
+
+-- pumpjack
+if not data.raw["mining-drill"]["pumpjack"].fast_replaceable_group then
+    data.raw["mining-drill"]["pumpjack"].fast_replaceable_group = "pumpjack"
+    data.raw["mining-drill"]["pumpjack-mk2"].fast_replaceable_group = "pumpjack"
+else
+    data.raw["mining-drill"]["pumpjack-mk2"].fast_replaceable_group = data.raw["mining-drill"]["pumpjack"].fast_replaceable_group
+end
+
+if not data.raw["mining-drill"]["pumpjack"].next_upgrade then
+    data.raw["mining-drill"]["pumpjack"].next_upgrade = "pumpjack-mk2"
 end

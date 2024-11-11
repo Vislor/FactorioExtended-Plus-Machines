@@ -8,14 +8,14 @@ data:extend(
             localised_description = {"technology-description.advanced-oil-processing-2"},
             prerequisites = {"advanced-oil-processing", "speed-module", "titanium-processing"},
             effects = {
-                {
+                --[[ {
                     type = "unlock-recipe",
                     recipe = "oil-refinery-mk2"
                 },
                 {
                     type = "unlock-recipe",
                     recipe = "chemical-plant-mk2"
-                },
+                }, ]]
                 {
                     type = "unlock-recipe",
                     recipe = "pumpjack-mk2"
@@ -33,6 +33,7 @@ data:extend(
             },
             order = "d-c"
         },
+        --[[
         {
             type = "technology",
             name = "advanced-oil-processing-3",
@@ -111,19 +112,18 @@ data:extend(
                 time = 30
             },
             order = "d-f"
-        },
+        }, ]]
         {
             type = "technology",
             name = "mechanical-engineer",
-            icons = {{icon = "__base__/graphics/technology/automation-1.png", tint = {r = 0.4, g = 0.804, b = 0.667, a = 0.8}}},
-            icon_size = 256,
-            prerequisites = {"automation-3", "advanced-material-processing-2", "speed-module", "effectivity-module", "titanium-processing"},
+            icons = {{icon = "__base__/graphics/technology/automation-1.png", icon_size = 256, tint = {r = 0.4, g = 0.804, b = 0.667, a = 0.8}}},
+            prerequisites = {"automation-3", "advanced-material-processing-2", "speed-module", "efficiency-module", "titanium-processing"},
             effects = {
                 {
                     type = "unlock-recipe",
                     recipe = "radar-mk2"
                 },
-                {
+                --[[ {
                     type = "unlock-recipe",
                     recipe = "electric-furnace-mk2"
                 },
@@ -138,7 +138,7 @@ data:extend(
                 {
                     type = "unlock-recipe",
                     recipe = "lab-mk2"
-                }
+                } ]]
             },
             unit = {
                 count = 300,
@@ -152,7 +152,7 @@ data:extend(
             },
             order = "f-b-f-a"
         },
-        {
+        --[[ {
             type = "technology",
             name = "mechanical-engineer-2",
             icons = {{icon = "__base__/graphics/technology/automation-1.png", tint = {r = 0.690, g = 0.75, b = 1}}},
@@ -184,6 +184,6 @@ data:extend(
                 time = 60
             },
             order = "f-b-f-b"
-        }
+        } ]]
     }
 )

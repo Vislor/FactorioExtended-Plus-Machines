@@ -5,13 +5,26 @@ data:extend(
             name = "radar-mk2",
             enabled = false,
             ingredients = {
-                {"radar", 1},
-                {"advanced-circuit", 25},
-                {"steel-plate", 50}
+                {type = "item", name = "radar", amount = 1},
+                {type = "item", name = "advanced-circuit", amount = 25},
+                {type = "item", name = "steel-plate", amount = 50}
             },
-            result = "radar-mk2"
+            results = {{type = "item", name = "radar-mk2", amount = 1}}
         },
         {
+            type = "recipe",
+            name = "pumpjack-mk2",
+            energy_required = 20,
+            enabled = false,
+            ingredients = {
+                {type = "item", name = "pumpjack", amount = 1},
+                {type = "item", name = "steel-plate", amount = 15},
+                {type = "item", name = "advanced-circuit", amount = 10},
+                {type = "item", name = "pipe", amount = 10}
+            },
+            results = {{type = "item", name = "pumpjack-mk2", amount = 1}}
+        },
+        --[[ {
             type = "recipe",
             name = "electric-furnace-mk2",
             enabled = false,
@@ -137,19 +150,6 @@ data:extend(
         },
         {
             type = "recipe",
-            name = "pumpjack-mk2",
-            energy_required = 20,
-            enabled = false,
-            ingredients = {
-                {"pumpjack", 1},
-                {"steel-plate", 15},
-                {"advanced-circuit", 10},
-                {"pipe", 10}
-            },
-            result = "pumpjack-mk2"
-        },
-        {
-            type = "recipe",
             name = "centrifuge-mk2",
             energy_required = 4,
             enabled = false,
@@ -200,11 +200,11 @@ data:extend(
                 {"processing-unit", 50}
             },
             result = "lab-mk3"
-        }
+        } ]]
     }
 )
 
 if data.raw.item["pipe-mk2"] then
     factorioextendedplus.core.remove_recipe_item("pumpjack-mk2", "pipe")
-    factorioextendedplus.core.add_recipe_item("pumpjack-mk2", {"pipe-mk2", 5})
+    factorioextendedplus.core.add_recipe_item("pumpjack-mk2", {type = "item", name = "pipe-mk2", amount = 5})
 end
