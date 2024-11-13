@@ -17,19 +17,7 @@ if not data.raw["assembling-machine"]["centrifuge"].next_upgrade then
     data.raw["assembling-machine"]["centrifuge"].next_upgrade = "centrifuge-mk2"
 end
 
--- chemical-plant
-if not data.raw["assembling-machine"]["chemical-plant"].fast_replaceable_group then
-    data.raw["assembling-machine"]["chemical-plant"].fast_replaceable_group = "chemical-plant"
-    data.raw["assembling-machine"]["chemical-plant-mk2"].fast_replaceable_group = "chemical-plant"
-    data.raw["assembling-machine"]["chemical-plant-mk3"].fast_replaceable_group = "chemical-plant"
-else
-    data.raw["assembling-machine"]["chemical-plant-mk2"].fast_replaceable_group = data.raw["assembling-machine"]["chemical-plant"].fast_replaceable_group
-    data.raw["assembling-machine"]["chemical-plant-mk3"].fast_replaceable_group = data.raw["assembling-machine"]["chemical-plant"].fast_replaceable_group
-end
 
-if not data.raw["assembling-machine"]["chemical-plant"].next_upgrade then
-    data.raw["assembling-machine"]["chemical-plant"].next_upgrade = "chemical-plant-mk2"
-end
 
 -- electric-furnace
 if not data.raw["furnace"]["electric-furnace"].fast_replaceable_group then
@@ -73,20 +61,6 @@ if not data.raw["lab"]["lab"].next_upgrade then
     data.raw["lab"]["lab"].next_upgrade = "lab-mk2"
 end
 
--- oil-refinery
-if not data.raw["assembling-machine"]["oil-refinery"].fast_replaceable_group then
-    data.raw["assembling-machine"]["oil-refinery"].fast_replaceable_group = "oil-refinery"
-    data.raw["assembling-machine"]["oil-refinery-mk2"].fast_replaceable_group = "oil-refinery"
-    data.raw["assembling-machine"]["oil-refinery-mk3"].fast_replaceable_group = "oil-refinery"
-else
-    data.raw["assembling-machine"]["oil-refinery-mk2"].fast_replaceable_group = data.raw["assembling-machine"]["oil-refinery"].fast_replaceable_group
-    data.raw["assembling-machine"]["oil-refinery-mk3"].fast_replaceable_group = data.raw["assembling-machine"]["oil-refinery"].fast_replaceable_group
-end
-
-if not data.raw["assembling-machine"]["oil-refinery"].next_upgrade then
-    data.raw["assembling-machine"]["oil-refinery"].next_upgrade = "oil-refinery-mk2"
-end
-
  ]]
 
 -- radar
@@ -111,4 +85,38 @@ end
 
 if not data.raw["mining-drill"]["pumpjack"].next_upgrade then
     data.raw["mining-drill"]["pumpjack"].next_upgrade = "pumpjack-mk2"
+end
+
+-- chemical-plant
+if not data.raw["assembling-machine"]["chemical-plant"].fast_replaceable_group then
+    data.raw["assembling-machine"]["chemical-plant"].fast_replaceable_group = "chemical-plant"
+    data.raw["assembling-machine"]["chemical-plant-mk2"].fast_replaceable_group = "chemical-plant"
+    data.raw["assembling-machine"]["chemical-plant-mk3"].fast_replaceable_group = "chemical-plant"
+else
+    data.raw["assembling-machine"]["chemical-plant-mk2"].fast_replaceable_group = data.raw["assembling-machine"]["chemical-plant"].fast_replaceable_group
+    data.raw["assembling-machine"]["chemical-plant-mk3"].fast_replaceable_group = data.raw["assembling-machine"]["chemical-plant"].fast_replaceable_group
+end
+
+if not data.raw["assembling-machine"]["chemical-plant"].next_upgrade then
+    data.raw["assembling-machine"]["chemical-plant"].next_upgrade = "chemical-plant-mk2"
+end
+
+-- oil-refinery
+if not data.raw["assembling-machine"]["oil-refinery"].fast_replaceable_group then
+    data.raw["assembling-machine"]["oil-refinery"].fast_replaceable_group = "oil-refinery"
+    data.raw["assembling-machine"]["oil-refinery-mk2"].fast_replaceable_group = "oil-refinery"
+    data.raw["assembling-machine"]["oil-refinery-mk3"].fast_replaceable_group = "oil-refinery"
+else
+    data.raw["assembling-machine"]["oil-refinery-mk2"].fast_replaceable_group = data.raw["assembling-machine"]["oil-refinery"].fast_replaceable_group
+    data.raw["assembling-machine"]["oil-refinery-mk3"].fast_replaceable_group = data.raw["assembling-machine"]["oil-refinery"].fast_replaceable_group
+end
+
+if not data.raw["assembling-machine"]["oil-refinery"].next_upgrade then
+    data.raw["assembling-machine"]["oil-refinery"].next_upgrade = "oil-refinery-mk2"
+end
+
+if data.raw.container["aai-storehouse"] then
+    data.raw.container["aai-storehouse"].surface_conditions[1].min = 0.0
+    data.raw.container["aai-strongbox"].surface_conditions[1].min = 0.0
+    data.raw.container["aai-warehouse"].surface_conditions[1].min = 0.0
 end

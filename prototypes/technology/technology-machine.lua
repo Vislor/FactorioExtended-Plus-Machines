@@ -8,14 +8,14 @@ data:extend(
             localised_description = {"technology-description.advanced-oil-processing-2"},
             prerequisites = {"advanced-oil-processing", "speed-module", "titanium-processing"},
             effects = {
-                --[[ {
+                {
                     type = "unlock-recipe",
                     recipe = "oil-refinery-mk2"
                 },
                 {
                     type = "unlock-recipe",
                     recipe = "chemical-plant-mk2"
-                }, ]]
+                },
                 {
                     type = "unlock-recipe",
                     recipe = "pumpjack-mk2"
@@ -33,14 +33,13 @@ data:extend(
             },
             order = "d-c"
         },
-        --[[
         {
             type = "technology",
             name = "advanced-oil-processing-3",
             icon_size = 256,
             icon = "__base__/graphics/technology/oil-processing.png",
             localised_description = {"technology-description.advanced-oil-processing-3"},
-            prerequisites = {"advanced-oil-processing-2", "speed-module-2", "effectivity-module-2"},
+            prerequisites = {"advanced-oil-processing-2", "speed-module-2", "efficiency-module-2"},
             effects = {
                 {
                     type = "unlock-recipe",
@@ -64,6 +63,7 @@ data:extend(
             },
             order = "d-d"
         },
+        --[[
         {
             type = "technology",
             name = "centrifuge-2",
