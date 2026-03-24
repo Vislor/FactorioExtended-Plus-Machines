@@ -80,19 +80,47 @@ data:extend(
             },
             results = {{type = "item", name = "chemical-plant-mk3", amount = 1}}
         },
-        --[[ {
+        {
+            type = "recipe",
+            name = "centrifuge-mk2",
+            energy_required = 4,
+            enabled = false,
+            ingredients = {
+                {type = "item", name = "centrifuge", amount = 1},
+                {type = "item", name = "concrete", amount = 100},
+                {type = "item", name = "titanium-alloy", amount = 50},
+                {type = "item", name = "advanced-circuit", amount = 100}
+            },
+            results = {{type = "item", name = "centrifuge-mk2", amount = 1}},
+            requester_paste_multiplier = 2
+        },
+        {
+            type = "recipe",
+            name = "centrifuge-mk3",
+            energy_required = 4,
+            enabled = false,
+            ingredients = {
+                {type = "item", name = "centrifuge-mk2", amount = 1},
+                {type = "item", name = "concrete", amount = 100},
+                {type = "item", name = "titanium-alloy", amount = 50},
+                {type = "item", name = "processing-unit", amount = 100}
+            },
+            results = {{type = "item", name = "centrifuge-mk3", amount = 1}},
+            requester_paste_multiplier = 2
+        },
+        {
             type = "recipe",
             name = "electric-furnace-mk2",
             enabled = false,
             energy_required = 5,
             ingredients = {
-                {"electric-furnace", 1},
-                {"steel-plate", 10},
-                {"speed-module", 2},
-                {"advanced-circuit", 10},
-                {"pollution-filter", 1}
-            },
-            result = "electric-furnace-mk2"
+                {type = "item", name = "electric-furnace", amount = 1},
+                {type = "item", name = "steel-plate", amount = 10},
+                {type = "item", name = "speed-module", amount = 2},
+                {type = "item", name = "advanced-circuit", amount = 10},
+                {type = "item", name = "pollution-filter", amount = 1}
+            },         
+            results = {{ type = "item", name = "electric-furnace-mk2", amount = 1 }}
         },
         {
             type = "recipe",
@@ -100,15 +128,15 @@ data:extend(
             energy_required = 5,
             enabled = false,
             ingredients = {
-                {"electric-furnace-mk2", 1},
-                {"titanium-alloy", 20},
-                {"effectivity-module-2", 2},
-                {"processing-unit", 5},
-                {"pollution-filter", 1}
+                {type = "item", name = "electric-furnace-mk2", amount = 1},
+                {type = "item", name = "titanium-alloy", amount = 20},
+                {type = "item", name = "efficiency-module-2", amount = 2},
+                {type = "item", name = "processing-unit", amount = 5},
+                {type = "item", name = "pollution-filter", amount = 1}
             },
-            result = "electric-furnace-mk3"
+            results = {{ type = "item", name = "electric-furnace-mk3", amount = 1 }}
         },
-        {
+        --[[{
             type = "recipe",
             name = "assembling-machine-4",
             energy_required = 2.5,
@@ -147,34 +175,6 @@ data:extend(
                 {"pollution-filter", 1}
             },
             result = "electric-mining-drill-mk2"
-        },
-        {
-            type = "recipe",
-            name = "centrifuge-mk2",
-            energy_required = 4,
-            enabled = false,
-            ingredients = {
-                {"centrifuge", 1},
-                {"concrete", 100},
-                {"titanium-alloy", 50},
-                {"advanced-circuit", 100}
-            },
-            result = "centrifuge-mk2",
-            requester_paste_multiplier = 2
-        },
-        {
-            type = "recipe",
-            name = "centrifuge-mk3",
-            energy_required = 4,
-            enabled = false,
-            ingredients = {
-                {"centrifuge-mk2", 1},
-                {"concrete", 100},
-                {"titanium-alloy", 50},
-                {"processing-unit", 100}
-            },
-            result = "centrifuge-mk3",
-            requester_paste_multiplier = 2
         },
         {
             type = "recipe",

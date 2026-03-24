@@ -63,7 +63,6 @@ data:extend(
             },
             order = "d-d"
         },
-        --[[
         {
             type = "technology",
             name = "centrifuge-2",
@@ -93,7 +92,7 @@ data:extend(
             name = "centrifuge-3",
             icon_size = 256,
             icon = "__base__/graphics/technology/nuclear-power.png",
-            prerequisites = {"centrifuge-2", "advanced-electronics-2"},
+            prerequisites = {"centrifuge-2", "processing-unit"},
             effects = {
                 {
                     type = "unlock-recipe",
@@ -112,7 +111,7 @@ data:extend(
                 time = 30
             },
             order = "d-f"
-        }, ]]
+        },
         {
             type = "technology",
             name = "mechanical-engineer",
@@ -123,11 +122,11 @@ data:extend(
                     type = "unlock-recipe",
                     recipe = "radar-mk2"
                 },
-                --[[ {
+                {
                     type = "unlock-recipe",
                     recipe = "electric-furnace-mk2"
                 },
-                {
+                --[[{
                     type = "unlock-recipe",
                     recipe = "assembling-machine-4"
                 },
@@ -152,25 +151,24 @@ data:extend(
             },
             order = "f-b-f-a"
         },
-        --[[ {
+        {
             type = "technology",
             name = "mechanical-engineer-2",
-            icons = {{icon = "__base__/graphics/technology/automation-1.png", tint = {r = 0.690, g = 0.75, b = 1}}},
-            icon_size = 256,
-            prerequisites = {"mechanical-engineer", "speed-module-2", "effectivity-module-2"},
+            icons = {{icon = "__base__/graphics/technology/automation-1.png", icon_size = 256, tint = {r = 0.690, g = 0.75, b = 1}}},
+            prerequisites = {"mechanical-engineer", "speed-module-2", "efficiency-module-2"},
             effects = {
                 {
                     type = "unlock-recipe",
                     recipe = "electric-furnace-mk3"
                 },
-                {
+                --[[{
                     type = "unlock-recipe",
                     recipe = "assembling-machine-5"
                 },
                 {
                     type = "unlock-recipe",
                     recipe = "lab-mk3"
-                }
+                } ]]
             },
             unit = {
                 count = 500,
@@ -184,6 +182,6 @@ data:extend(
                 time = 60
             },
             order = "f-b-f-b"
-        } ]]
+        }
     }
 )

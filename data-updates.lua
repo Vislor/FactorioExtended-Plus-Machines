@@ -3,36 +3,6 @@ if not data.raw["assembling-machine"]["assembling-machine-3"].next_upgrade then
     data.raw["assembling-machine"]["assembling-machine-3"].next_upgrade = "assembling-machine-4"
 end
 
--- centrifuge
-if not data.raw["assembling-machine"]["centrifuge"].fast_replaceable_group then
-    data.raw["assembling-machine"]["centrifuge"].fast_replaceable_group = "centrifuge"
-    data.raw["assembling-machine"]["centrifuge-mk2"].fast_replaceable_group = "centrifuge"
-    data.raw["assembling-machine"]["centrifuge-mk3"].fast_replaceable_group = "centrifuge"
-else
-    data.raw["assembling-machine"]["centrifuge-mk2"].fast_replaceable_group = data.raw["assembling-machine"]["centrifuge"].fast_replaceable_group
-    data.raw["assembling-machine"]["centrifuge-mk3"].fast_replaceable_group = data.raw["assembling-machine"]["centrifuge"].fast_replaceable_group
-end
-
-if not data.raw["assembling-machine"]["centrifuge"].next_upgrade then
-    data.raw["assembling-machine"]["centrifuge"].next_upgrade = "centrifuge-mk2"
-end
-
-
-
--- electric-furnace
-if not data.raw["furnace"]["electric-furnace"].fast_replaceable_group then
-    data.raw["furnace"]["electric-furnace"].fast_replaceable_group = "electric-furnace"
-    data.raw["furnace"]["electric-furnace-mk2"].fast_replaceable_group = "electric-furnace"
-    data.raw["furnace"]["electric-furnace-mk3"].fast_replaceable_group = "electric-furnace"
-else
-    data.raw["furnace"]["electric-furnace-mk2"].fast_replaceable_group = data.raw["furnace"]["electric-furnace"].fast_replaceable_group
-    data.raw["furnace"]["electric-furnace-mk3"].fast_replaceable_group = data.raw["furnace"]["electric-furnace"].fast_replaceable_group
-end
-
-if not data.raw["furnace"]["electric-furnace"].next_upgrade then
-    data.raw["furnace"]["electric-furnace"].next_upgrade = "electric-furnace-mk2"
-end
-
 -- electric-mining-drill
 if not data.raw["mining-drill"]["electric-mining-drill"].fast_replaceable_group then
     data.raw["mining-drill"]["electric-mining-drill"].fast_replaceable_group = "electric-mining-drill"
@@ -113,6 +83,34 @@ end
 
 if not data.raw["assembling-machine"]["oil-refinery"].next_upgrade then
     data.raw["assembling-machine"]["oil-refinery"].next_upgrade = "oil-refinery-mk2"
+end
+
+-- centrifuge
+if not data.raw["assembling-machine"]["centrifuge"].fast_replaceable_group then
+    data.raw["assembling-machine"]["centrifuge"].fast_replaceable_group = "centrifuge"
+    data.raw["assembling-machine"]["centrifuge-mk2"].fast_replaceable_group = "centrifuge"
+    data.raw["assembling-machine"]["centrifuge-mk3"].fast_replaceable_group = "centrifuge"
+else
+    data.raw["assembling-machine"]["centrifuge-mk2"].fast_replaceable_group = data.raw["assembling-machine"]["centrifuge"].fast_replaceable_group
+    data.raw["assembling-machine"]["centrifuge-mk3"].fast_replaceable_group = data.raw["assembling-machine"]["centrifuge"].fast_replaceable_group
+end
+
+if not data.raw["assembling-machine"]["centrifuge"].next_upgrade then
+    data.raw["assembling-machine"]["centrifuge"].next_upgrade = "centrifuge-mk2"
+end
+
+-- electric-furnace
+if not data.raw["furnace"]["electric-furnace"].fast_replaceable_group then
+    data.raw["furnace"]["electric-furnace"].fast_replaceable_group = "electric-furnace"
+    data.raw["furnace"]["electric-furnace-mk2"].fast_replaceable_group = "electric-furnace"
+    data.raw["furnace"]["electric-furnace-mk3"].fast_replaceable_group = "electric-furnace"
+else
+    data.raw["furnace"]["electric-furnace-mk2"].fast_replaceable_group = data.raw["furnace"]["electric-furnace"].fast_replaceable_group
+    data.raw["furnace"]["electric-furnace-mk3"].fast_replaceable_group = data.raw["furnace"]["electric-furnace"].fast_replaceable_group
+end
+
+if not data.raw["furnace"]["electric-furnace"].next_upgrade then
+    data.raw["furnace"]["electric-furnace"].next_upgrade = "electric-furnace-mk2"
 end
 
 if data.raw.container["aai-storehouse"] then
