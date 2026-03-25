@@ -1,22 +1,4 @@
---[[ -- assembling-machine
-if not data.raw["assembling-machine"]["assembling-machine-3"].next_upgrade then
-    data.raw["assembling-machine"]["assembling-machine-3"].next_upgrade = "assembling-machine-4"
-end
-
--- electric-mining-drill
-if not data.raw["mining-drill"]["electric-mining-drill"].fast_replaceable_group then
-    data.raw["mining-drill"]["electric-mining-drill"].fast_replaceable_group = "electric-mining-drill"
-    data.raw["mining-drill"]["electric-mining-drill-mk2"].fast_replaceable_group = "electric-mining-drill"
-    data.raw["mining-drill"]["electric-mining-drill-mk3"].fast_replaceable_group = "electric-mining-drill"
-else
-    data.raw["mining-drill"]["electric-mining-drill-mk2"].fast_replaceable_group = data.raw["mining-drill"]["electric-mining-drill"].fast_replaceable_group
-    data.raw["mining-drill"]["electric-mining-drill-mk3"].fast_replaceable_group = data.raw["mining-drill"]["electric-mining-drill"].fast_replaceable_group
-end
-
-if not data.raw["mining-drill"]["electric-mining-drill"].next_upgrade then
-    data.raw["mining-drill"]["electric-mining-drill"].next_upgrade = "electric-mining-drill-mk2"
-end
-
+--[[ 
 -- lab
 if not data.raw["lab"]["lab"].fast_replaceable_group then
     data.raw["lab"]["lab"].fast_replaceable_group = "lab"
@@ -111,6 +93,25 @@ end
 
 if not data.raw["furnace"]["electric-furnace"].next_upgrade then
     data.raw["furnace"]["electric-furnace"].next_upgrade = "electric-furnace-mk2"
+end
+
+-- electric-mining-drill
+if not data.raw["mining-drill"]["electric-mining-drill"].fast_replaceable_group then
+    data.raw["mining-drill"]["electric-mining-drill"].fast_replaceable_group = "electric-mining-drill"
+    data.raw["mining-drill"]["electric-mining-drill-mk2"].fast_replaceable_group = "electric-mining-drill"
+    data.raw["mining-drill"]["electric-mining-drill-mk3"].fast_replaceable_group = "electric-mining-drill"
+else
+    data.raw["mining-drill"]["electric-mining-drill-mk2"].fast_replaceable_group = data.raw["mining-drill"]["electric-mining-drill"].fast_replaceable_group
+    data.raw["mining-drill"]["electric-mining-drill-mk3"].fast_replaceable_group = data.raw["mining-drill"]["electric-mining-drill"].fast_replaceable_group
+end
+
+if not data.raw["mining-drill"]["electric-mining-drill"].next_upgrade then
+    data.raw["mining-drill"]["electric-mining-drill"].next_upgrade = "electric-mining-drill-mk2"
+end
+
+-- assembling-machine
+if not data.raw["assembling-machine"]["assembling-machine-3"].next_upgrade then
+    data.raw["assembling-machine"]["assembling-machine-3"].next_upgrade = "assembling-machine-4"
 end
 
 if data.raw.container["aai-storehouse"] then

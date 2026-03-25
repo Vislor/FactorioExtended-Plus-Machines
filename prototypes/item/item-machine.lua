@@ -23,9 +23,9 @@ local items = {
     {source = "electric-furnace", name = "electric-furnace-mk3", subgroup = "fb-machines", order = "a-b", tint = nil, icon_name = "electric-furnace-mk3.png"},
     {source = "electric-mining-drill", name = "electric-mining-drill-mk2", subgroup = "fb-machines", order = "c-a2", tint = Constant.green_tint },
     {source = "electric-mining-drill", name = "electric-mining-drill-mk3", subgroup = "fb-machines", order = "c-a3", tint = Constant.blue_tint },
-    --[[ 
     {source = "assembling-machine-3", name = "assembling-machine-4", subgroup = "fb-machines", order = "b-a", tint = nil, icon_name = "assembling-machine-4.png"},
     {source = "assembling-machine-3", name = "assembling-machine-5", subgroup = "fb-machines", order = "b-b", tint = nil, icon_name = "assembling-machine-5.png"},
+    --[[ 
     {source = "lab", name = "lab-mk2", subgroup = "fb-machines", order = "e-c", tint = nil, icon_name = "lab-mk2.png"},
     {source = "lab", name = "lab-mk3", subgroup = "fb-machines", order = "e-d", tint = nil, icon_name = "lab-mk3.png"} ]]
 }

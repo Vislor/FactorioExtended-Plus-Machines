@@ -130,10 +130,11 @@ data:extend(
                     type = "unlock-recipe",
                     recipe = "electric-mining-drill-mk2"
                 },
-                --[[{
+                {
                     type = "unlock-recipe",
                     recipe = "assembling-machine-4"
                 },
+                --[[
                 {
                     type = "unlock-recipe",
                     recipe = "lab-mk2"
@@ -164,11 +165,12 @@ data:extend(
                 {
                     type = "unlock-recipe",
                     recipe = "electric-mining-drill-mk3"
-                }
-                --[[{
+                },
+                {
                     type = "unlock-recipe",
                     recipe = "assembling-machine-5"
                 },
+                --[[
                 {
                     type = "unlock-recipe",
                     recipe = "lab-mk3"

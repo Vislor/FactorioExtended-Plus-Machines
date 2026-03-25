@@ -1,4 +1,4 @@
---require("assembling-machine")
+require("assembling-machine")
 require("centrifuge")
 require("electric-mining-drill")
 require("electric-furnace")

@@ -165,18 +165,18 @@ data:extend(
                 {type = "item", name = "pollution-filter", amount = 4}
             },
             results = {{ type = "item", name = "electric-mining-drill-mk3", amount = 1}}
-        }
-        --[[{
+        },
+        {
             type = "recipe",
             name = "assembling-machine-4",
             energy_required = 2.5,
             enabled = false,
             ingredients = {
-                {"speed-module", 2},
-                {"assembling-machine-3", 2},
-                {"pollution-filter", 1}
+                {type = "item", name = "speed-module", amount = 2},
+                {type = "item", name = "assembling-machine-3", amount = 2},
+                {type = "item", name = "pollution-filter", amount = 1}
             },
-            result = "assembling-machine-4"
+            results = {{ type = "item", name = "assembling-machine-4", amount = 1}}
         },
         {
             type = "recipe",
@@ -184,13 +184,14 @@ data:extend(
             energy_required = 5,
             enabled = false,
             ingredients = {
-                {"speed-module-2", 2},
-                {"effectivity-module-2", 2},
-                {"assembling-machine-4", 2},
-                {"pollution-filter", 1}
+                {type = "item", name = "speed-module-2", amount = 2},
+                {type = "item", name = "efficiency-module-2", amount = 2},
+                {type = "item", name = "assembling-machine-4", amount = 2},
+                {type = "item", name = "pollution-filter", amount = 1}
             },
-            result = "assembling-machine-5"
+            results = {{type = "item", name = "assembling-machine-5", amount = 1}}
         },
+        --[[
         {
             type = "recipe",
             name = "lab-mk2",
