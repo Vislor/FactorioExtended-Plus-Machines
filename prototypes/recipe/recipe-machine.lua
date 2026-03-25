@@ -136,6 +136,36 @@ data:extend(
             },
             results = {{ type = "item", name = "electric-furnace-mk3", amount = 1 }}
         },
+        {
+            type = "recipe",
+            name = "electric-mining-drill-mk2",
+            energy_required = 2,
+            enabled = false,
+            ingredients = {
+                {type = "item", name = "electric-mining-drill", amount = 1},
+                {type = "item", name = "advanced-circuit", amount = 3},
+                {type = "item", name = "steel-plate", amount = 10},
+                {type = "item", name = "speed-module", amount = 2},
+                {type = "item", name = "efficiency-module", amount = 2},
+                {type = "item", name = "pollution-filter", amount = 1}
+            },
+            results = {{ type = "item", name = "electric-mining-drill-mk2", amount = 1}}
+        },
+        {
+            type = "recipe",
+            name = "electric-mining-drill-mk3",
+            energy_required = 4,
+            enabled = false,
+            ingredients = {
+                {type = "item", name = "electric-mining-drill-mk2", amount = 1},
+                {type = "item", name = "processing-unit", amount = 3},
+                {type = "item", name = "titanium-alloy", amount = 10},
+                {type = "item", name = "speed-module-2", amount = 2},
+                {type = "item", name = "efficiency-module-2", amount = 2},
+                {type = "item", name = "pollution-filter", amount = 4}
+            },
+            results = {{ type = "item", name = "electric-mining-drill-mk3", amount = 1}}
+        }
         --[[{
             type = "recipe",
             name = "assembling-machine-4",
@@ -160,21 +190,6 @@ data:extend(
                 {"pollution-filter", 1}
             },
             result = "assembling-machine-5"
-        },
-        {
-            type = "recipe",
-            name = "electric-mining-drill-mk2",
-            energy_required = 2,
-            enabled = false,
-            ingredients = {
-                {"electric-mining-drill", 1},
-                {"advanced-circuit", 3},
-                {"steel-plate", 10},
-                {"speed-module", 2},
-                {"effectivity-module", 2},
-                {"pollution-filter", 1}
-            },
-            result = "electric-mining-drill-mk2"
         },
         {
             type = "recipe",

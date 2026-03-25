@@ -6,7 +6,6 @@ local function change_animation(graphics, tint)
         for _, layer in pairs(graphics.animation[direction].layers) do
             if layer.filename and (string.find(layer.filename, "electric%-mining%-drill%-" .. short .. ".png") or string.find(layer.filename, "electric%-mining%-drill%-" .. short .. "%-wet.png")) then
                 layer.tint = tint
-                layer.hr_version.tint = tint
             end
         end
         for _, working_visualisation in pairs(graphics.working_visualisations) do
@@ -14,13 +13,11 @@ local function change_animation(graphics, tint)
                 local animation = working_visualisation[direction .. "_animation"]
                 if animation.filename and string.find(animation.filename, "electric%-mining%-drill%-" .. short .. "%-front.png") then
                     animation.tint = tint
-                    animation.hr_version.tint = tint
                 end
                 if animation.layers then
                     for _, layer in pairs(animation.layers) do
                         if layer.filename and string.find(layer.filename, "electric%-mining%-drill%-" .. short .. "%-wet%-front.png") then
                             layer.tint = tint
-                            layer.hr_version.tint = tint
                         end
                     end
                 end
@@ -40,12 +37,11 @@ end
 --
 local drill2 = table.deepcopy(data.raw["mining-drill"]["electric-mining-drill"])
 drill2.name = "electric-mining-drill-mk2"
-drill2.icons = {{icon = drill2.icon, icon_size = drill2.icon_size, icon_mips = drill2.icon_mipmaps, tint = Constant.green_tint}}
-drill2.icon_mipmaps = nil
-drill2.minable.result = drill2.name
+drill2.icons = {{icon = drill2.icon, icon_size = drill2.icon_size, tint = Constant.green_tint}}
+drill2.minable = { result = drill2.name, mining_time = 0.3 }
 drill2.mining_speed = 1
-drill2.module_specification.module_slots = 4
-drill2.energy_source.emissions_per_minute = 8
+drill2.module_slots = 4
+drill2.energy_source.emissions_per_minute.pollution = 8
 drill2.energy_usage = "180kW"
 drill2.resource_searching_radius = 3.49
 drill2.max_health = 600
@@ -55,11 +51,11 @@ drill2.wet_mining_graphics_set = change_animation(drill2.wet_mining_graphics_set
 
 local drill3 = table.deepcopy(data.raw["mining-drill"]["electric-mining-drill"])
 drill3.name = "electric-mining-drill-mk3"
-drill2.icons = {{icon = drill3.icon, icon_size = drill3.icon_size, icon_mips = drill3.icon_mipmaps, tint = Constant.blue_tint}}
-drill3.minable.result = drill3.name
+drill2.icons = {{icon = drill3.icon, icon_size = drill3.icon_size, tint = Constant.blue_tint}}
+drill3.minable = { result = drill3.name, mining_time = 0.3 }
 drill3.mining_speed = 2
-drill3.module_specification.module_slots = 5
-drill3.energy_source.emissions_per_minute = 6
+drill3.module_slots = 5
+drill3.energy_source.emissions_per_minute.pollution = 6
 drill3.energy_usage = "270kW"
 drill3.resource_searching_radius = 4.49
 drill3.max_health = 900

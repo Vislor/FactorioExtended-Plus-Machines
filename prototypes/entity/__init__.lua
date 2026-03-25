@@ -1,6 +1,6 @@
 --require("assembling-machine")
 require("centrifuge")
---require("electric-mining-drill")
+require("electric-mining-drill")
 require("electric-furnace")
 --require("lab")
 require("chemical-plant")
